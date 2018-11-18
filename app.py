@@ -12,7 +12,7 @@ app = Flask(__name__)
 def home():
     # Load the folder of images into a json object
     data = {"incidents" : []}
-    for imageName in os.listdir("static")[::-1]:
+    for imageName in os.listdir("static/crimePhotos")[::-1]:
         metaData = imageName.split("_")
         unixTime = int(metaData[0])
         dateStr = datetime.datetime.utcfromtimestamp(unixTime).strftime("%h %d %I:%M%p")

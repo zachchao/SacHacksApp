@@ -69,5 +69,17 @@ thead{
 	color: white;
 }
 
+footer{
+  width: 100%;
+  line-height: 40px;
+  background-color: #212a37;
+  color: white;
+  margin-top: auto;
+  height: 45px;
+}
+
+.table{
+	margin-bottom: 0px;
+}
 
 {% include 'css/navbar.css' %}

@@ -14,7 +14,7 @@ function initMap() {
   var scale = 0.8
   
   icons = {
-    weapon : {
+    Weapon : {
       path: svgPath,
       fillColor: '#cc3300',
       fillOpacity: 1,
@@ -22,7 +22,7 @@ function initMap() {
       strokeWeight: 0,
       scale: scale
     },
-    weapon2 : {
+    Weapon2 : {
       path: svgPath,
       fillColor: '#cc3300',
       fillOpacity: 1,
@@ -30,7 +30,7 @@ function initMap() {
       strokeWeight: 0,
       scale: scale * 2
     },
-    breakin : {
+    Breakin : {
       path: svgPath,
       fillColor: '#ff9966',
       fillOpacity: 1,
@@ -38,7 +38,7 @@ function initMap() {
       strokeWeight: 0,
       scale: scale
     },
-    breakin2 : {
+    Breakin2 : {
       path: svgPath,
       fillColor: '#ff9966',
       fillOpacity: 1,
@@ -46,7 +46,7 @@ function initMap() {
       strokeWeight: 0,
       scale: scale * 2
     },
-    masked : {
+    Masked : {
       path: svgPath,
       fillColor: '#ffcc00',
       fillOpacity: 1,
@@ -54,7 +54,7 @@ function initMap() {
       strokeWeight: 0,
       scale: scale
     },
-    masked2 : {
+    Masked2 : {
       path: svgPath,
       fillColor: '#ffcc00',
       fillOpacity: 1,
@@ -62,7 +62,7 @@ function initMap() {
       strokeWeight: 0,
       scale: scale * 2
     },
-    suspicious : {
+    Suspicious : {
       path: svgPath,
       fillColor: '#99cc33',
       fillOpacity: 1,
@@ -70,7 +70,7 @@ function initMap() {
       strokeWeight: 0,
       scale: scale
     },
-    suspicious2 : {
+    Suspicious2 : {
       path: svgPath,
       fillColor: '#99cc33',
       fillOpacity: 1,
@@ -97,7 +97,8 @@ function initMap() {
       type: "{{incident['type']}}",
       fillOpacity : {{incident["opacity"]}},
       image : "{{incident['fileName']}}",
-      timeStamp : {{incident["timeStamp"]}}
+      timeStamp : {{incident["timeStamp"]}},
+      dateStr : "{{incident['dateStr']}}"
     },
     {% endfor %}
   ]
@@ -105,7 +106,7 @@ function initMap() {
   incidentFeature.forEach(function(feature) {
     var infowindow = new google.maps.InfoWindow({
       maxWidth: 320,
-      content : "<h1>" + feature.type + "</h1><img height=200px width=300px src='static/" + feature.image + "'>"
+      content : "<h2>" + feature.type + "</h2><h4>" + feature.dateStr + "</h4><img height=200px width=300px src='static/crimePhotos/" + feature.image + "'>"
     });
 
     var marker = new google.maps.Marker({
