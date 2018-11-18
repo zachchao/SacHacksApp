@@ -1,0 +1,29 @@
+{
+	"incidents" : [
+		{
+			"type" : "Stabbing",
+			"time" : "11/17 8:04PM",
+			"location" : "33.056600, -117.274810"
+		},
+		{
+			"type" : "Triple Homicide",
+			"time" : "11/16 8:04PM",
+			"location" : "33.056600, -117.274810"
+		},
+		{
+			"type" : "Sick Burn",
+			"time" : "11/15 8:04PM",
+			"location" : "33.056600, -117.274810"
+		},
+		{
+			"type" : "Bad Pun",
+			"time" : "11/13 8:04PM",
+			"location" : "33.056600, -117.274810"
+		},
+		{
+			"type" : "Something Else!",
+			"time" : "11/13 8:04PM",
+			"location" : "33.056600, -117.274810"
+		}
+	]
+}

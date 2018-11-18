@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Watch Dog</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+
+  <style>
+    {% include 'css/index.css' %}
+  </style>
+
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="#">Watch Dog</a>
+    </nav>
+    <div class="row" style="height: calc(70% - 40px); width: 100%; margin: 0px;">
+        <div id="map"></div>
+      </div>
+
+      <div class="row" style="max-height: calc(30% - 40px); margin: 0; padding: 0;">
+        <div class="col-6" style="padding-right: 5px; padding-left: 0; margin: 0;">
+          <div class="table-wrapper-scroll-y" id="style-1">
+            <table class="table table-bordered table-striped">
+              <tbody>
+                <tr>
+                  <th colspan="2" style="text-align: center;">Incidents</td>
+                </tr>
+              {% for incident in incidentData %}
+                  <tr id="{{incident['timeStamp']}}">
+                    <td>{{incident["type"]}}</td>
+                    <td>{{incident["dateStr"]}}</td>
+                  </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="col-6" style="padding-right: 0; padding-left: 5px; margin: 0;">
+        <div class="table-wrapper-scroll-y" id="style-1">
+            <table class="table table-bordered table-striped">
+              <tbody>
+                <tr>
+                  <th colspan="2" style="text-align: center;">Watch Dogs</td>
+                </tr>
+              {% for watchDog in watchDogsData %}
+                  <tr id='{{watchDog["name"]}}'>
+                    <td>{{watchDog["name"]}}</td>
+                    <td>{{watchDog["status"]}}</td>
+                  </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+        </div>
+      </div>
+  </body>
+
+  <script>
+    {% include 'js/map.js' %}
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO-4cC7zlTtzzAhS01USFJbopynYSKF7A&callback=initMap" async defer></script>
+</html>
