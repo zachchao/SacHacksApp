@@ -11,14 +11,6 @@
 		{
 			"name" : "2",
 			"status" : "Stopped"
-		},
-		{
-			"name" : "3",
-			"status" : "Running"
-		},
-		{
-			"name" : "4",
-			"status" : "Stopped"
 		}
 	]
 }

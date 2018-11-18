@@ -13,7 +13,7 @@
 
   <body>
     <nav class="navbar">
-      <a class="navbar-brand" href="#">Watch Dog</a>
+      <a class="navbar-brand" href="#">Car Armour</a>
     </nav>
     <div class="row" style="height: calc(70% - 40px); width: 100%; margin: 0px;">
         <div id="map"></div>
@@ -28,7 +28,7 @@
                   <th colspan="2" style="text-align: center;">Incidents</td>
                 </tr>
               {% for incident in incidentData %}
-                  <tr id="{{incident['timeStamp']}}">
+                  <tr id="{{incident['timeStamp']}}" style="cursor: pointer;">
                     <td>{{incident["type"]}}</td>
                     <td>{{incident["dateStr"]}}</td>
                   </tr>
@@ -45,7 +45,7 @@
                   <th colspan="2" style="text-align: center;">Watch Dogs</td>
                 </tr>
               {% for watchDog in watchDogsData %}
-                  <tr id='{{watchDog["name"]}}'>
+                  <tr id='{{watchDog["name"]}}' style="cursor: pointer;">
                     <td>{{watchDog["name"]}}</td>
                     <td>{{watchDog["status"]}}</td>
                   </tr>
