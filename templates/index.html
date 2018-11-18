@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Carmour</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="static/favicon.png" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  </head>
+  {% include 'header.html' %}
 
   <style>
     {% include 'css/index.css' %}
   </style>
 
   <body>
-    <nav class="navbar">
-      <img src="/static/logo.png" width="192" height="108" class="d-inline-block align-top" alt="" style="background-color: transparent; filter: brightness(0) invert(1); margin-left: -50px;">
-    </nav>
+    {% include 'navbar.html' %}
     <div class="row" style="height: calc(70% - 43px); width: 100%; margin: 0px;">
         <div id="map"></div>
     </div>
@@ -26,7 +18,7 @@
           <table class="table table-bordered table-striped">
             <tbody>
               <tr>
-                <th colspan="2" style="text-align: center;">Incidents</td>
+                <th colspan="2" style="text-align: center;">Incidents</th>
               </tr>
             {% for incident in incidentData %}
                 <tr id="{{incident['timeStamp']}}" style="cursor: pointer;">
@@ -43,7 +35,7 @@
         <table class="table table-bordered table-striped">
           <tbody>
             <tr>
-              <th colspan="2" style="text-align: center;">Watch Dogs</td>
+              <th colspan="2" style="text-align: center;">Watch Dogs</th>
             </tr>
             {% for watchDog in watchDogsData %}
             <tr id='{{watchDog["name"]}}' style="cursor: pointer;">

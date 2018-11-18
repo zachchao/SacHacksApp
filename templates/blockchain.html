@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  {% include 'header.html' %}
+
+  <style>
+    {% include 'css/index.css' %}
+  </style>
+
+  <body>
+    {% include 'navbar.html' %}
+    <div class="row" style="max-height: calc(100% - 83px); width: 100%; margin: 0px;">
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <th style="text-align: center;">Hash</th>
+            <th style="text-align: center;">Age</th>
+          </tr>
+          {% for data in blockchainData %}
+          <tr>
+            <td>{{data["hash"]}}</td>
+            <td>{{data["secondsAgo"]}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>    
+  </body>
+
+  <footer>
+      <p style="margin-left: 35px; margin-bottom: 0px; color: #BDC3C7; display: inline; float: right;">Zachary Chao | Siddhartha Datta | Tushar Jain | Rea Savla 2018. All rights reserved. &nbsp;&nbsp;</p>
+  </footer>
+</html>

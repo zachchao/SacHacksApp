@@ -32,6 +32,14 @@ def home():
     return render_template('index.html', incidentData=data["incidents"],
         watchDogsData=watchDogData["watchDogInfo"])
 
+
+@app.route('/blockchain')
+def blockchain():
+    # Load the folder of images into a json object
+    with open("blockchainData.json") as f:
+        data = json.loads(f.read())
+    return render_template('blockchain.html', blockchainData=data["data"])
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
     
