@@ -1,8 +1,8 @@
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 33.056600, lng: -117.274810},
-    zoom: 17,
+    center: {lat: 38.777090, lng: -121.272080},
+    zoom: 16,
     mapTypeId: 'roadmap',
     {% include 'js/map_styles.js' %},
     mapTypeControlOptions: { mapTypeIds: [] },
@@ -138,17 +138,17 @@ function initMap() {
 
   var watchDogFeatures = [
     {
-      position: new google.maps.LatLng(33.058000, -117.276810),
+      position: new google.maps.LatLng(38.774590, -121.272080),
       type: 'watchDog',
       name: '0'
     },
     {
-      position: new google.maps.LatLng(33.056700, -117.275810),
+      position: new google.maps.LatLng(38.776090, -121.271080),
       type: 'watchDog',
       name: '1'
     },
     {
-      position: new google.maps.LatLng(33.056700, -117.274800),
+      position: new google.maps.LatLng(38.776590, -121.275080),
       type: 'watchDog',
       name: '2'
     }

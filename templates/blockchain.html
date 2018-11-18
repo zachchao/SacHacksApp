@@ -9,16 +9,22 @@
   <body>
     {% include 'navbar.html' %}
     <div class="row" style="max-height: calc(100% - 83px); width: 100%; margin: 0px;">
-      <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped" style="table-layout: fixed;">
         <tbody>
           <tr>
-            <th style="text-align: center;">Hash</th>
+            <th style="text-align: center;">Transaction ID</th>
+            <th style="text-align: center;">From</th>
+            <th style="text-align: center;">To</th>
+            <th style="text-align: center;">Reward</th>
             <th style="text-align: center;">Age</th>
           </tr>
           {% for data in blockchainData %}
           <tr>
-            <td>{{data["hash"]}}</td>
-            <td>{{data["secondsAgo"]}}</td>
+            <td style="overflow: scroll;">{{data["txID"]}}</td>
+            <td style="overflow: scroll;">{{data["from"]}}</td>
+            <td style="overflow: scroll;">{{data["to"]}}</td>
+            <td style="overflow: scroll;">{{data["reward"]}}</td>
+            <td style="overflow: scroll;">{{data["age"]}} seconds ago</td>
           </tr>
           {% endfor %}
         </tbody>

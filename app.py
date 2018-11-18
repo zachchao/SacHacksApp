@@ -33,12 +33,14 @@ def home():
         watchDogsData=watchDogData["watchDogInfo"])
 
 
-@app.route('/blockchain')
-def blockchain():
+@app.route('/ledger')
+def ledger():
     # Load the folder of images into a json object
-    with open("blockchainData.json") as f:
+    with open("blockchain.json") as f:
         data = json.loads(f.read())
-    return render_template('blockchain.html', blockchainData=data["data"])
+    for transaction in data["transactions"]:
+        transaction["age"] = int(time.time()) - int(transaction["timeStamp"])
+    return render_template('blockchain.html', blockchainData=data["transactions"])
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
