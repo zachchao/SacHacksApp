@@ -39,6 +39,7 @@ html, body {
 {
 	width: 12px;
 	background-color: #F5F5F5;
+	display: none;
 }
 
 #style-1::-webkit-scrollbar-thumb

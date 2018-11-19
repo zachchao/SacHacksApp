@@ -151,6 +151,11 @@ function initMap() {
       position: new google.maps.LatLng(38.776590, -121.275080),
       type: 'watchDog',
       name: '2'
+    },
+    {
+      position: new google.maps.LatLng(38.772590, -121.275480),
+      type: 'watchDog',
+      name: '3'
     }
   ]
 

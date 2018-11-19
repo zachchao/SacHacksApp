@@ -20,11 +20,11 @@
           </tr>
           {% for data in blockchainData %}
           <tr>
-            <td style="overflow: scroll;">{{data["txID"]}}</td>
-            <td style="overflow: scroll;">{{data["from"]}}</td>
-            <td style="overflow: scroll;">{{data["to"]}}</td>
-            <td style="overflow: scroll;">{{data["reward"]}}</td>
-            <td style="overflow: scroll;">{{data["age"]}} seconds ago</td>
+            <td id="style-1" style="overflow-x: scroll;">{{data["txID"]}}</td>
+            <td id="style-1" style="overflow-x: scroll;">{{data["from"]}}</td>
+            <td id="style-1" style="overflow-x: scroll;">{{data["to"]}}</td>
+            <td id="style-1" style="overflow-x: scroll;">{{data["reward"]}}</td>
+            <td id="style-1" style="overflow-x: scroll;">{{data["age"]}} seconds ago</td>
           </tr>
           {% endfor %}
         </tbody>

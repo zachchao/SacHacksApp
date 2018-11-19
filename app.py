@@ -43,5 +43,5 @@ def ledger():
     return render_template('blockchain.html', blockchainData=data["transactions"])
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port=6000, debug=True)
     
